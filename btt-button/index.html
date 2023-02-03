@@ -49,6 +49,7 @@
                     body = document.body,
                     docElem = document.documentElement,
                     offset = 100,
+                    isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1,
                     scrollpos , docHeight;
 
                 
@@ -59,7 +60,7 @@
                 offset = docHeight / 4;
             } */
 
-            docHeight = Math.max(body.scrollHeight, body.offsetheight, docElem.clientHeight,docElem.scrollHeight,docElem.offsetHeight);
+            docHeight = Math.max(body.scrollHeight, body.offsetHeight, docElem.clientHeight,docElem.scrollHeight,docElem.offsetHeight);
             if(docHeight != 'undefined'){
                 offset = docHeight/4;
             }
